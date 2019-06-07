@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Input from '../../components/Input'
 import { login } from '../../services/auth'
-import { setToken } from '../../helpers/auth'
+import { setToken, getToken } from '../../helpers/auth'
 import './Login.css'
 
 
@@ -36,6 +36,7 @@ class Login extends Component {
       setToken(response.data.token)
       this.props.history.push('/home')
       console.log(response)
+      console.log(getToken())
     } catch (error) {
       console.log(error)
       this.setState({

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import CourseForm from '../../components/CourseForm'
 import CourseList from '../../components/CourseList'
 import './Home.css'
-import { getToken } from '../../helpers/auth';
+//import { getToken } from '../../helpers/auth';
 
 class Home extends Component {
   state = {

@@ -31,8 +31,9 @@
     padding: 30px;
     width: 80%;
     margin: 50px auto;
-    box-shadow: 1px 2px 5px wheat;
+    /*box-shadow: 1px 2px 5px wheat;*/
     background: white;
+    margin-top: 0px;
   }
   
   input {
