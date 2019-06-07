@@ -1,0 +1,18 @@
+  div > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div > .form {
+    padding: 30px;
+    width: 80%;
+    margin: 50px auto;
+    box-shadow: 1px 2px 5px wheat;
+    background: white;
+  }
+
+  div > .form > button {
+    margin-top: 50px;
+  }

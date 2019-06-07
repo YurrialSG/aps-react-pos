@@ -1,0 +1,127 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: white;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+  
+  h1 {
+    border-style: none;
+    text-align: center;
+    font-family: 'open sans', sans-serif;
+    padding: 2rem 0 50px;;
+    margin: 0;
+    color: crimson;
+    font-size: 2rem;
+  }
+  
+  .App {
+    padding: 30px;
+    width: 80%;
+    margin: 50px auto;
+    box-shadow: 1px 2px 5px wheat;
+    background: white;
+  }
+  
+  input {
+    width: 80%;
+    box-sizing: border-box;
+    border: none;
+    font-size: 1.3rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
+    transition: box-shadow 0.2s ease-in;
+  }
+  
+  input:focus{
+     box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
+     outline: none;
+  }
+  
+  input::-webkit-input-placeholder{
+    opacity: 1;
+    transition: opacity 0.25s ease-out;
+  }
+  
+  input:hover::-webkit-input-placeholder,
+  input:focus::-webkit-input-placeholder{
+    opacity: 0;
+  }
+  
+  button {
+    width: 20%;
+    height: 40px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 700;
+    background: rgb(34,193,195);
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+    border: 0px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-out;
+  }
+  
+  #btnAlterar {
+    width: 20%;
+    height: 40px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 700;
+    background: rgb(34,193,195);
+    background: linear-gradient(100deg, rgba(112,221,12) 0%,     rgba(100,128,21,1) 100%);
+    border: 0px;
+    cursor: pointer;
+    transition: opacity 0.25s ease-out;
+  }
+  
+  button:hover{
+    opacity: 0.8;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding-top: 10px;
+    text-align: center;
+    margin: 15px 0 0 0px;;
+  }
+  
+  li span {
+    display: inline-block;
+    width: 30%;
+    font-size: 1.3rem;
+    color: #6a6a6a;
+  }
+  
+  li > button:first-of-type {
+    background: #6a6a6a;
+    color: #fff;
+    margin-right: 1%;
+    width: 9%;
+  }
+  
+  li > button:last-of-type {
+    background: #d9534f;
+    width: 10%;
+    color: #fff;
+  }
+  
+  ul > form {
+    margin: 15px 0;
+  }
