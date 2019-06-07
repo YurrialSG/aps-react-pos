@@ -4,6 +4,7 @@ import { login } from '../../services/auth'
 import { setToken } from '../../helpers/auth'
 import './Login.css'
 
+
 class Login extends Component {
   state = {
     email: '',
@@ -49,6 +50,12 @@ class Login extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className='form'>
+          {
+            hasError &&
+            <div className='erro'>
+              Usuário/Senha incorreto(s)
+            </div>
+          }
           <h1>Login</h1>
           <Input
             type='email'
@@ -64,10 +71,6 @@ class Login extends Component {
             placeholder="Senha"
             onChange={this.handleChange}
           />
-          {
-            hasError &&
-            <span>DEU RUIM</span>
-          }
           <button>
             {
               isLoading

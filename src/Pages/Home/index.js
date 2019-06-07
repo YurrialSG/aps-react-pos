@@ -2,17 +2,18 @@ import React, { Component } from 'react';
 import CourseForm from '../../components/CourseForm'
 import CourseList from '../../components/CourseList'
 import './Home.css'
+import { getToken } from '../../helpers/auth';
 
-class Home extends Component { 
+class Home extends Component {
   state = {
-    courses : [
-      {name : "HTML"},
-      {name : "CSS"},
-      {name : "jQuery"},
+    courses: [
+      { name: "HTML" },
+      { name: "CSS" },
+      { name: "jQuery" },
     ],
-    current : ''
+    current: ''
   }
-  
+
 
   //updateCourse
   updateCourse = (e) => {
@@ -26,7 +27,7 @@ class Home extends Component {
     e.preventDefault();
     let current = this.state.current
     let courses = this.state.courses;
-    courses.push({name: current})
+    courses.push({ name: current })
     this.setState({
       courses,
       current: ''
@@ -43,25 +44,25 @@ class Home extends Component {
   }
 
 
-    //editCourse
-    editCourse = (index, value) => {
-      let courses = this.state.courses;
-      let course = courses[index];
-      course['name'] = value;
-      this.setState({
-        courses
-      })
-    }
+  //editCourse
+  editCourse = (index, value) => {
+    let courses = this.state.courses;
+    let course = courses[index];
+    course['name'] = value;
+    this.setState({
+      courses
+    })
+  }
 
   render() {
-    const {courses} = this.state;
+    const { courses } = this.state;
     const courseList = courses.map((course, index) => {
-      return <CourseList details={course} key={index} index={index} update={this.handleChange} deleteCourse={this.deleteCourse} editCourse={this.editCourse}/>
+      return <CourseList details={course} key={index} index={index} update={this.handleChange} deleteCourse={this.deleteCourse} editCourse={this.editCourse} />
     })
-    return(
+    return (
       <section className="App">
         <h1>Lista de Cursos</h1>
-        <CourseForm current={this.state.current} updateCourse={this.updateCourse} addCourse={this.addCourse}/>
+        <CourseForm current={this.state.current} updateCourse={this.updateCourse} addCourse={this.addCourse} />
         <ul>{courseList}</ul>
       </section>
     );

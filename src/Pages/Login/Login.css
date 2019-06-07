@@ -13,6 +13,23 @@
     background: white;
   }
 
+  div > .form > h1 {
+    margin-top: -50px;
+  }
+  
   div > .form > button {
     margin-top: 50px;
+  }
+
+  div > .form > .erro { 
+    padding: 15px 15px 15px 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;  
+    color: #a94442;
+    width: 30%;
+    display: grid;
+    text-align: center;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    margin: 5px 0px 0px 70%;
   }
